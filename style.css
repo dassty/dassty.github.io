@@ -1,64 +1,80 @@
-body {
-    background-color: pink;
-}
-
-/* Responsive Grid Media Queries */
-@media all and (min-width: 1024px) and (max-width: 1280px) { 
-    body {
-        background-color: red;
-        transition: background-color 0.5s, color 0.5s;
-    }
-}
- 
-@media all and (min-width: 768px) and (max-width: 1024px) { 
-    body {
-        background-color: green;
-        transition: background-color 0.5s, color 0.5s;
-    }
-}
- 
-@media all and (min-width: 480px) and (max-width: 768px) { 
-    body {
-        background-color: blue;
-        transition: background-color 0.5s, color 0.5s;
-    }
-}
- 
-@media all and (max-width: 480px) { 
-    body {
-        background-color: yellow;
-        transition: background-color 0.5s, color 0.5s;
-    }
-}
-
-.profile-image {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-@media all and (max-width: 480px) { 
-    .profile-image {
-        display: none;
-    }
-}
-
-/* Go Back Button Styles */
-button, .go-back-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: lightblue;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
-    color: black;
-    transition: background-color 0.3s;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
 }
 
-button:hover, .go-back-button:hover {
-    background-color: #fd4766; /* Change color on hover */
+html{
+    font-size: 62.5%;
 }
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+
+
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: antiquewhite;
+    border-bottom: 3px solid antiquewhite;
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid skyblue;
+        border-bottom: 3px solid skyblue;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1
